@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+	 <title>月月排版工具</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+<style type="text/css">
+    *{margin:0;padding:0;}
+    .fl{float:left;}
+    .fr{float:right;}
+
+    #content{
+      width:1000px;
+      height:400px;
+      margin: 98px auto;
+      position: relative;
+      background:#fff;
+  }
+    #search_text{
+      width:389px;
+      height:382px;
+  }
+    #group{
+      width:69px;
+      position:absolute;
+      top:69px;
+      left:437px;
+  }
+    input[type="button"]{
+      margin:5px 0;
+      width:120px;
+      height:32px;
+      -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+      transition: width 2s, height 2s, transform 2s;
+  }
+    input[type="button"]:hover{
+      border-radius:10px;
+      -webkit-border-radius:10px;
+      outline: none;
+ }
+    #layer{
+      width:389px;
+      height:382px;
+      border:1px solid #ccc;
+      overflow: scroll;
+ }
+    span{
+      background:orange;
+ }
+    p.len{
+      position:absolute;
+      right:133px;
+      bottom:-21px;   
+      display: none;
+ }
+
+    .context{
+      width:200px;
+      height:200px;
+      border:1px solid red;
+ }
+    p.length{
+      position: absolute;
+      left:50px;
+      font-size:12px;
+      display: none;
+ }
+    .tip_length{
+      position:absolute;
+      left:-50px;
+
+ }
+    .imgs01{
+      position: absolute;
+      top:-47px;
+ }
+
+</style>
+</head>
+<body>
+    <div id="content">
+      <!--输入层-->
+      <div id="text" class="text fl">
+      <textarea id="search_text"></textarea>
+      <p class="len" id="len"></p>
+      <p class="length" id="length"></p>
+      <p class="imgs01"><img src="img/1.jpg"></p>
+
+    </div>
+      <!--功能层-->
+      <div id="group" class="group fl">
+         <input type="button" value="自动排版" id="btn" class="btn btn-primary">
+         <input type="button" value="替换敏感词" id="replace" class="btn btn-info">
+         <input type="button" value="查找" id="findBtn" class="btn btn-warning">
+         <input type="button" value="替换" id="replaceBtn" class="btn btn-danger">
+         <input type="button" value="加后缀" id="Suffix" class="btn btn-success">
+         <input type="button" value="清除内容" id="clearfix" class="btn btn-danger">
+      </div>
+      <!--显示层-->
+      <div id="layer" class="layer fr"></div>
+    </div>
+   
+<!--[主函数入口]-->
+<script src="js/main.js"></script>
+<!--[封装替换函数]-->
+<script src="js/getReplace.js"></script>
+<!--[js显示字符个数]-->
+<script src="js/getlength.js"></script>
+<!--[排版功能]-->
+<script src="js/Typesetting.js"></script>
+<!--[替换敏感词]-->
+<script src="js/replaceAlive.js"></script>
+<!--[查找功能]-->
+<script src="js/search.js"></script>
+<!--[替换功能]-->
+<script src="js/replace.js"></script>
+<!--[加后缀]-->
+<script src="js/suffix.js"></script>
+
+</body>
+</html>
