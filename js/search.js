@@ -11,7 +11,7 @@
          //统计高亮的数量
          var lens = searchs.value.match(reg).length;
 
-         $("len").innerHTML = "温馨提示个数为:"+lens;
+         $("len").innerHTML = "<i class='Reminder_icon'></i>温馨提示个数为:"+lens;
          $("len").style.display = "block";
 
      }
