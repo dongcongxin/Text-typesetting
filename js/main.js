@@ -1,4 +1,4 @@
- /*
+﻿ /*
         @修复了敏感词只替换一个的问题
         @修复了排版不会换行的问题
         @修复文字溢出不会出现滚动条的情况
@@ -28,7 +28,13 @@
         $("clearfix").onclick = function(){
             $("search_text").value = "";
             $("length").innerHTML = "";
+            $("tip_text").style.display = "block";
         }
+        
+        /*表单获取焦点触发事件*/
+        $("search_text").onfocus = function(){
+           $("tip_text").style.display = "none";
+       }
     }
   }
 _main();
