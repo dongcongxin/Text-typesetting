@@ -41,6 +41,7 @@
        /*双击清空右侧文字*/
        $("clearfix").addEventListener('dblclick', function() {
            search.innerHTML = "";
+           $("len").innerHTML = "";
        }, false);
    }
    _main();
