@@ -1,0 +1,100 @@
+  *{margin:0;padding:0;}
+    .fl{float:left;}
+    .fr{float:right;}
+
+    #content{
+      width:1000px;
+      height:400px;
+      margin: 98px auto;
+      position: relative;
+      background:#fff;
+  }
+    #search_text{
+      width:389px;
+      height:382px;
+  }
+    #group{
+      width:69px;
+      position:absolute;
+      top:69px;
+      left:437px;
+  }
+    input[type="button"]{
+      margin:5px 0;
+      width:120px;
+      height:32px;
+      -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+      transition: width 2s, height 2s, transform 2s;
+  }
+    input[type="button"]:hover{
+      border-radius:10px;
+      -webkit-border-radius:10px;
+      outline: none;
+ }
+    #layer{
+      width:389px;
+      height:382px;
+      border:1px solid #ccc;
+      overflow: scroll;
+ }
+   .act{
+      background:orange;
+ }
+    p.len{
+      position:absolute;
+      right:133px;
+      bottom:-21px;   
+      display: none;
+ }
+
+    .context{
+      width:200px;
+      height:200px;
+      border:1px solid red;
+ }
+    p.length{
+      position: absolute;
+      left:50px;
+      font-size:12px;
+      display: none;
+ }
+    .tip_length{
+      position:absolute;
+      left:-50px;
+
+ }
+    p.tip_text{
+      position:absolute;
+      left:4px;
+      display:none;
+     
+ }
+    .tip_text .delete{
+      background: url(img/blue/over/003a_15.png)  no-repeat;
+      padding-right:23px;
+      display:inline-block;
+      width:18px;
+      height:18px;    
+      vertical-align:top;
+ }
+    .Reminder_icon{
+      background: url(img/blue/over/003a_03.png) no-repeat;
+      padding-right:23px;
+      display:inline-block;
+      width:18px;
+      height:18px;
+      vertical-align:top;
+ }
+/* 一键复制 */
+    #clone{
+     position:absolute;
+     left:435px;
+     top:314px;
+ }	
+/* 帮助 */
+    .menu{
+      position:absolute;
+      right:-140px;
+      top:-61px;
+ 
+ }
