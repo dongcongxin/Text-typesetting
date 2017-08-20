@@ -29,7 +29,6 @@
      	 var math_length = 0;
          math_length = getLenght(this.value);
          
-           
          if ($("search_text").value !== "") {
                $("length").innerHTML = "小仙女总共输入" + parseInt(math_length) + "个字符";
                $("length").style.display = "block";
