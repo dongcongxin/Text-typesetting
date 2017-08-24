@@ -9,11 +9,8 @@
    var $ = function(id) {
        return document.getElementById(id);
    }
-   var search = $("layer");
-
-   function _main() {
-     
-     function addListener(target, type, handler){
+   
+   function addListener(target, type, handler){
      	
      	if (target.addEventListener) {
      		target.addEventListener(type, handler , false);
@@ -23,7 +20,9 @@
      		target["on" + type] = handler;
      	}
      }
-     
+   
+   function _main() {
+   	
      // 记录输入XXX个字符
      function recordCharacter() {
      	 var math_length = 0;
@@ -40,8 +39,10 @@
      // 清除内容
     function clearCharacter() {
     	 $("search_text").value = "";
-           $("length").innerHTML = "";
-           $("tip_text").style.display = "block";
+         $("length").innerHTML = "";
+         
+         //当内容不为空时显示
+         $("tip_text").style.display = "block";
     }
     
      // 表单获取焦点触发事件
@@ -50,7 +51,7 @@
     }
     
     // 清除文字
-    function clearText() {
+    function clearText(search) {
     	 search.innerHTML = "";
          $("len").innerHTML = "";
     }
@@ -58,7 +59,9 @@
     addListener($("search_text"), "keyup", recordCharacter);
     addListener($("clearfix"), "click", clearCharacter);   
     addListener($("search_text"), "focus", isFocus);
-    addListener($("clearfix"), 'dbclick', clearText);
+    addListener($("clearfix"), 'dblclick', function() {
+    	clearText($("layer"));
+    })
 
      }
    
